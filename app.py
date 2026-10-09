@@ -10,3 +10,22 @@ def hello_world():
 
 if __name__ == '__main__':
     app.run()
+@app.route('/api/trips', methods=['POST'])
+def add_trip():
+    data = request.get_json()
+    return jsonify({'status': 'Trajet ajouté'}), 201
+    @app.route('/api/reports/export', methods=['GET'])
+def export_report(): 
+    return jsonify({'status': 'Rapport généré'}), 200
+
+@app.route('/api/trips', methods=['GET'])
+def get_trips():
+    return jsonify({'status': 'Trajets récupérés'}), 200
+@app.route('/api/trips/<id>', methods=['DELETE'])
+def delete_trip(id):
+def get_trip(id):
+    return jsonify({'status': 'Trajet récupéré'}), 200
+
+
+
+
